@@ -1,3 +1,5 @@
+package ContactList;
+
 /**
  * Created by macaque on 25.06.2016.
  */
@@ -10,8 +12,8 @@ public class Work {
 
         Address address1 = new Address();
         Address address2 = new Address();
-        address1.addAddress("Kiev","Khreshatyk ",4);
-        address2.addAddress("Fastiv","Soborna ",6);
+        address1.initAddress("Kiev","Khreshatyk ",4);
+        address2.initAddress("Fastiv","Soborna ",6);
 
         s1.initContact("Oleg ","+38093034545 ",address1);
         s1.showDetailsContact();
@@ -31,10 +33,10 @@ public class Work {
 
         s3.showContactList();
 
-      /*  String addressToJSON = ua.artcode.week1.day2.ToJSONConverter.addressToJSON(address1);
+      /*  String addressToJSON = ua.artcode.week1.day2.ContactList.ToJSONConverter.addressToJSON(address1);
         System.out.println(addressToJSON);
 
-        String conToJSON = ua.artcode.week1.day2.ToJSONConverter.contactToJSON(s1);
+        String conToJSON = ua.artcode.week1.day2.ContactList.ToJSONConverter.contactToJSON(s1);
         System.out.println(conToJSON); */
 
         String contactListToJSON = ToJSONConverter.contactListToJSON(s3);

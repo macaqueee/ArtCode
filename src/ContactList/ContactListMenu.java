@@ -1,3 +1,5 @@
+package ContactList;
+
 import java.util.Scanner;
 
 /**
@@ -65,7 +67,7 @@ public class ContactListMenu {
         int address_num = validateInput();
 
         Address address_contact = new Address();
-        address_contact.addAddress(address_city, address_street, address_num);
+        address_contact.initAddress(address_city, address_street, address_num);
 
         Contact contact = new Contact();
         contact.initContact(name,phone,address_contact);

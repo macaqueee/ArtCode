@@ -1,3 +1,5 @@
+package ContactList;
+
 /**
  * Created by macaque on 25.06.2016.
  */
@@ -7,7 +9,7 @@ public class ContactList {
 
     public void addContact(Contact contact){
         if (size == contactList.length) {
-            System.out.println("Sorry,your ContactList is full");
+            System.out.println("Sorry,your ContactList.ContactList is full");
         } else {
             contactList[size] = contact;
             size++;
@@ -16,7 +18,7 @@ public class ContactList {
 
     public void deleteContact(String contact_name) {
         if (size == 0){
-            System.out.println("Sorry, your ContactList is empty");
+            System.out.println("Sorry, your ContactList.ContactList is empty");
         } else {
              for (int i = 0; i < size; i++) {
                  if (contactList[i].name.equals(contact_name)){
@@ -47,7 +49,7 @@ public class ContactList {
     public void showFirstfive(){
         String result = "";
         if (size == 0){
-            System.out.println("Sorry, your ContactList is empty");
+            System.out.println("Sorry, your ContactList.ContactList is empty");
         }
         if (size <= 5){
             showContactList();
@@ -61,7 +63,7 @@ public class ContactList {
     public void showLastFive(){
         String result = "";
         if (size == 0){
-            System.out.println("Sorry, your ContactList is empty");
+            System.out.println("Sorry, your ContactList.ContactList is empty");
         }
         if (size <= 5){
             showContactList();
@@ -80,7 +82,7 @@ public class ContactList {
             }
         }
         if (find_count == 0){
-            System.out.println("Sorry, there is no " + "\"" + conact_name + "\"" + " in ContactList");
+            System.out.println("Sorry, there is no " + "\"" + conact_name + "\"" + " in ContactList.ContactList");
         }
     }
 }

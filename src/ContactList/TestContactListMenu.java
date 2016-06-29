@@ -1,3 +1,5 @@
+package ContactList;
+
 /**
  * Created by macaque on 27.06.2016.
  */
