@@ -10,7 +10,6 @@ public class ContactListMenu {
         while(true){
             showMainMenu();
 
-
             int choice = validateInput();
 
             if (choice == 1){
@@ -21,8 +20,14 @@ public class ContactListMenu {
                 showContactDetails(contactList);
             } else if (choice == 4){
                 showContactListJSON(contactList);
+            } else if (choice == 4){
+                showContactListJSON(contactList);
             } else if (choice == 5){
                 deleteContactMenu(contactList);
+            } else if (choice == 6){
+                contactList.showFirstfive();
+            } else if (choice == 7){
+                contactList.showLastFive();
             } else if (choice == 0){
                 break;
             }
@@ -73,6 +78,8 @@ public class ContactListMenu {
         System.out.println("3. Show contact details");
         System.out.println("4. Show All in JSON format");
         System.out.println("5. Delete contact");
+        System.out.println("6. Show first 5 contacts");
+        System.out.println("7. Show last 5 contacts");
         System.out.println("0. Exit");
     }
 

@@ -42,9 +42,35 @@ public class ContactList {
                 System.out.println(i + ". " + contactList[i].name + "\n");
             }
         }
-
     }
 
+    public void showFirstfive(){
+        String result = "";
+        if (size == 0){
+            System.out.println("Sorry, your ContactList is empty");
+        }
+        if (size <= 5){
+            showContactList();
+        } else {
+            for (int i = 0; i <5 ; i++) {
+                result += contactList[i].name + "\n";
+            }
+        }
+    }
+
+    public void showLastFive(){
+        String result = "";
+        if (size == 0){
+            System.out.println("Sorry, your ContactList is empty");
+        }
+        if (size <= 5){
+            showContactList();
+        } else {
+            for (int i = size-5; i < size ; i++) {
+                result += contactList[i].name + "\n";
+            }
+        }
+    }
     public void findContact(String conact_name){
         int find_count = 0;
         for (int i = 0; i < size ; i++) {
