@@ -4,29 +4,39 @@ package Lectures;
  * Created by macaque on 29.06.2016.
  */
 public class Student {
+
     public String name;
     public Address address;
-    public int sub_count;
-    Subject[] subject_list = new Subject[10];
+    private int sub_count;
+    private Subject[] subject_list = new Subject[10];
 
 
-    private void learnStudent(Subject subject){
-        int hours_count = 50;  // making learning hours 0..50 range
-        subject.setDone_hour((int)(Math.random()*hours_count));
+    public void initStudent(String input_name, Address input_address){
+
+        name = input_name;
+        address = input_address;
     }
 
-    public void addSubject(Subject subject){
+    public void learnStudent() {
+        int hours;
+        for (int i = 0; i <sub_count ; i++) {
+            hours = subject_list[i].course_hour;
+            subject_list[i].setDone_hour((int) (Math.random() * hours));
+        }
+    }
+
+    public void addSubject(Subject subject) {
         subject_list[sub_count] = subject;
         sub_count++;
     }
 
-    public void deleleteLastSubject(){
+    public void deleleteLastSubject() {
         sub_count--;
         subject_list[sub_count] = null;
 
     }
 
-    public String showAllSubject(){
+    public String showAllSubject() {
         String result = "";
         for (int i = 0; i < sub_count; i++) {
             result += subject_list[i].name + "\n";
@@ -34,7 +44,18 @@ public class Student {
         return result;
     }
 
-    public int getAvgMark(int hours_count){
-        return 0;
+    public String showAllSubjectDetails(){
+        String result = "";
+        for (int i = 0; i <sub_count ; i++) {
+            result += subject_list[i].showDetailSubject();
+        }
+        return result;
+    }
+    public float getAvgMark() {
+        int sum_mark = 0;
+        for (int i = 0; i < sub_count; i++) {
+            sum_mark += subject_list[i].calculateMark();
+        }
+        return (float)sum_mark/sub_count;
     }
 }

@@ -11,6 +11,8 @@ public class TestAddress {
         System.out.println(gavno);
 
        Student student = new Student();
+        float a = 5;
+        System.out.println(a/2);
 
     //    System.out.println(student.learnStudent());
 

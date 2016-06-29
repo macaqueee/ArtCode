@@ -16,20 +16,26 @@ public class Subject {
         this.done_hour = done_hour;
     }
 
-    public int calculateMark(){
-        if (done_hour <= 50 && done_hour >= 45){
-            return 5;
-        } else if (done_hour < 45 && done_hour >= 35){
-            return 4;
-        } else if (done_hour < 35 && done_hour >= 25){
-            return 3;
-        } else if (done_hour < 25 && done_hour >= 15){
-            return 2;
-        } else return 0;
+    public String showDetailSubject(){
+        return name + ": " + "hours=" +course_hour + " done_hours=" + done_hour  + "\n";
     }
-    Student[] students = new Student[10];
+    public void initSubject(String init_name, int init_course_hour){
 
+        name = init_name;
+        course_hour = init_course_hour;
+    }
 
+    public int calculateMark(){
 
-
+        if ((float)done_hour/course_hour >= 0.9){
+            mark = 5;
+        } else if ((float)done_hour/course_hour >= 0.7){
+            mark = 4;
+        } else if ((float)done_hour/course_hour >= 0.5){
+            mark = 3;
+        } else if ((float)done_hour/course_hour >= 0.3){
+            mark = 2;
+        } else mark = 1;
+        return mark;
+    }
 }
