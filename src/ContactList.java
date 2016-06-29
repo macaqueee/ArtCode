@@ -2,7 +2,7 @@
  * Created by macaque on 25.06.2016.
  */
 public class ContactList {
-    private int size;
+    public int size;
     public Contact[] contactList = new Contact[10];
 
     public void addContact(Contact contact){
@@ -20,11 +20,19 @@ public class ContactList {
         } else {
              for (int i = 0; i < size; i++) {
                  if (contactList[i].name.equals(contact_name)){
-                     contactList[i] = null;
-                     size--;
+                     eraseContact(i);
                  }
              }
         }
+    }
+
+    private void eraseContact(int number){
+
+        for (int i = number; i <size-1; i++) {
+            contactList[i] = contactList[i+1];
+        }
+        size--;
+        contactList[size] = null;
     }
 
     public void showContactList() {

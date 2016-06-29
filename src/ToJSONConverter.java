@@ -17,15 +17,18 @@ public class ToJSONConverter {
     }
 
 
-    public static  String contactListToJSON(ContactList list){
-      String temp =  "";
-        for (int i = 0; i <list.contactList.length ; i++) {
-            if (list.contactList[i] != null) {
-                temp += contactToJSON(list.contactList[i]) + "," + "\n";
-            } else temp += "";
+    public static  String contactListToJSON(ContactList list) {
+        String temp = "";
+        if (list.size == 0) {
+            return temp;
+        } else {
+            for (int i = 0; i < list.contactList.length; i++) {
+                if (list.contactList[i] != null) {
+                    temp += contactToJSON(list.contactList[i]) + "," + "\n";
+                } else temp += "";
+            }
+            // return "{" + "\n" + "\"list\"" + ":" + "\n"+ temp.substring(0,temp.length()-1) + "\n"+ "}";
+            return temp.substring(0, temp.length() - 2);
         }
-           // return "{" + "\n" + "\"list\"" + ":" + "\n"+ temp.substring(0,temp.length()-1) + "\n"+ "}";
-            return  temp.substring(0,temp.length()-2);
     }
-
 }

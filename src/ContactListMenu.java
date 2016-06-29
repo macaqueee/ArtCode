@@ -10,7 +10,8 @@ public class ContactListMenu {
         while(true){
             showMainMenu();
 
-            int choice = scanner.nextInt();
+
+            int choice = validateInput();
 
             if (choice == 1){
                 showAddContactMenu(contactList);
@@ -56,7 +57,7 @@ public class ContactListMenu {
         System.out.println("Input address:street");
         String address_street = scanner.next();
         System.out.println("Input address:homeNumber");
-        int address_num = Integer.parseInt(scanner.next());
+        int address_num = validateInput();
 
         Address address_contact = new Address();
         address_contact.addAddress(address_city, address_street, address_num);
@@ -74,4 +75,18 @@ public class ContactListMenu {
         System.out.println("5. Delete contact");
         System.out.println("0. Exit");
     }
+
+    private int validateInput(){
+        int number;
+        do {
+            System.out.print("Input number, please: \n");
+            while (!scanner.hasNextInt()) {
+                String input = scanner.next();
+                System.out.printf("%s is not a valid number.\n", input);
+            }
+            number = scanner.nextInt();
+        } while (number < 0);
+        return  number;
+    }
+
 }
