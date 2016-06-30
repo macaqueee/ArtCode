@@ -11,17 +11,17 @@ public class Student {
     private Subject[] subject_list = new Subject[10];
 
 
-    public void initStudent(String input_name, Address input_address){
+    public void initStudent(String inputName, Address inputAddress){
 
-        name = input_name;
-        address = input_address;
+        name = inputName;
+        address = inputAddress;
     }
 
     public void learnStudent() {
         int hours;
         for (int i = 0; i <sub_count ; i++) {
-            hours = subject_list[i].course_hour;
-            subject_list[i].setDone_hour((int) (Math.random() * hours));
+            hours = subject_list[i].courseHour;
+            subject_list[i].setDoneHour((int) (Math.random() * hours));
         }
     }
 

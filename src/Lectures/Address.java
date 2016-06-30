@@ -8,11 +8,12 @@ public class Address {
     public String street;
     public int numHouse;
 
-    public Address(String input_city, String input_street, int input_numHouse){
 
-        city = input_city;
-        street = input_street;
-        numHouse = input_numHouse;
+    public Address(String inputCity, String inputStreet, int inputNumHouse){
+
+        city = inputCity;
+        street = inputStreet;
+        numHouse = inputNumHouse;
     }
 
     public void setCity(String city) {
@@ -42,14 +43,5 @@ public class Address {
     public String printAddress(){
         return city + street + numHouse;
     }
-    public void passExam(){
 
-    }
-    public String showSubjectInfo(){
-        return null;
-    }
-
-    public String getMark(){
-        return null;
-    }
 }

@@ -5,21 +5,21 @@ package ContactList;
  */
 public class ToJSONConverter {
 
-    public static String addressToJSON(Address address){
+    public static String addressToJSON(Address address) {
         return String.format(
                 "{\n \"city\" : %s,\n \"street\" : %s,\n \"num\" : %d \n}",
                 address.city, address.street, address.numberHouse);
     }
 
 
-    public static String contactToJSON(Contact contact){
+    public static String contactToJSON(Contact contact) {
         return String.format(
                 "{\n \"name\" : %s,\n \"phone\" : %s,\n \"address\" : %s\n}",
                 contact.name, contact.phone, addressToJSON(contact.address));
     }
 
 
-    public static  String contactListToJSON(ContactList list) {
+    public static String contactListToJSON(ContactList list) {
         String temp = "";
         if (list.size == 0) {
             return temp;
