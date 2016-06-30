@@ -18,7 +18,7 @@ public Student(String a){
 
 
 //getMethod, setMethod:
-Use for set or get access to private fields from (for) other methods. Also for changing some fields without complex processes.
+Used for set or get access to private fields from (for) other methods. Also for changing some fields without complex processes.
 
 //constant:
 
