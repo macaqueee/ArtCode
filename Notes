@@ -1,0 +1,48 @@
+// notes;
+
+
+//Constructor: 
+Class Student{
+
+// constructor by default;
+  public Student(){
+  
+  }
+}
+
+// constructor realoaded;
+public Student(String a){
+}
+
+//If constructor (type by default) is not initializated -> use reloaded;
+
+
+//getMethod, setMethod:
+Use for set or get access to private fields from (for) other methods. Also for changing some fields without complex processes.
+
+//constant:
+
+private static final <type> <NAME_OF_FIELD> = <value>;
+
+//Priority operation:
+
+int size = 0;
+int[] mas = new mas[5];
+mas[size++] = 5;
+
+1) Access to mas[0]
+2) mas[0] = 5;
+3) size++;
+
+//Write test to each method;
+
+Проектировать метод следует таким образом, чтобы при написании теста, было возможно сравнить реальный результат работы метода
+c ожидаемым (expected).
+
+//Example:
+public boolean addStudent(Student student){
+  // method's logic
+  if (...) {return false;}
+  if (...) {return false;}
+  return true;
+}
