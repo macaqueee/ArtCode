@@ -1,6 +1,7 @@
 package Inherit.test;
 
 import Inherit.model.Coder;
+import Inherit.model.Tester;
 import Inherit.model.Worker;
 
 /**
@@ -19,12 +20,21 @@ public class TestInheritance {
         Worker some = new Coder();
 
         startWork(worker);
+
         startWork(coder);
         startWork(some);
 
     }
 
     public static void startWork(Worker worker){
-
+        if (worker instanceof Coder){
+            Coder coderRef = (Coder) worker;
+            coderRef.code();
+        } else if (worker.getClass() == Tester.class){
+            Tester tester = (Tester) worker;
+            tester.test();
+        } else {
+            worker.work();
+        }
     }
 }

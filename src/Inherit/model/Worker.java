@@ -57,4 +57,8 @@ public class Worker {
     public void work(){
         System.out.println(phone);
     }
+
+    public Worker getOwnSelf(){
+        return this;
+    }
 }
