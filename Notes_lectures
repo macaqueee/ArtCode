@@ -46,3 +46,23 @@ public boolean addStudent(Student student){
   if (...) {return false;}
   return true;
 }
+
+
+//Inheritance
+is -a 
+has - a
+
+instanceOf  - check is-a
+getClass()  - check exactly class, which you was created from
+
+//Override methods - same signature.
+
+Child's ovirridden method could exdend access modifier protected (packet-default) -> public
+
+@Override  - mark of overriden method (check by compilator. is method overridden or not.)
+
+//UML
+
+1. Create UML Diagram
+2. Create structure, signatures
+3. Create tests
