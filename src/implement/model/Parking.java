@@ -36,16 +36,18 @@ public class Parking {
     }
 
     public boolean addMotoByPlaceNumber(Motorcycle motorcycle, int place){
-        if (Parking.checkStateParking(stateParking)) {
-            if (Parking.checkFreePlace(size)) {
-                if (motorcycles[place] != null) {
-                    System.out.println("Sorry, but this place already taken by another moto");
-                } else {
-                    addMoto(motorcycle, place);
+        if (checkInputNumber(place)) {
+            if (checkStateParking(stateParking)) {
+                if (checkFreePlace(size)) {
+                    if (motorcycles[place] != null) {
+                        System.out.println("Sorry, but this place already taken by another moto");
+                    } else {
+                        addMoto(motorcycle, place);
+                    }
                 }
             }
         }
-        return false;
+            return false;
     }
 
     public Motorcycle takeLastMoto(){
@@ -55,24 +57,37 @@ public class Parking {
         return null;
     }
 
-    public boolean addMoto(Motorcycle motorcycle,int inputPlace){
+    public Motorcycle takeMotoByPlaceNumber(int place){
+        return null;
+    }
+
+    private boolean addMoto(Motorcycle motorcycle,int inputPlace){
         motorcycles[inputPlace] = motorcycle;
         size++;
         return true;
     }
 
-    public static boolean checkFreePlace(int inputSize){
+    private static boolean checkFreePlace(int inputSize){
         if (inputSize == 10){
             System.out.println("Sorry, but there is no free place on Parking");
             return false;
         } else return true;
     }
 
-    public static boolean checkStateParking(boolean stateParking){
+    private static boolean checkStateParking(boolean stateParking){
         if (!stateParking){
             System.out.println("Sorry, but we are closed");
             return false;
-        } else return true;
+        } else
+            return true;
+    }
+
+    private static boolean checkInputNumber(int inputPlaceNumber){
+        if (inputPlaceNumber > 10 || inputPlaceNumber < 0){
+            System.out.println("Wrong input data");
+            return false;
+        } else
+            return true;
     }
 
 }
