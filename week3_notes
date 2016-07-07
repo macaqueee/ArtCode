@@ -13,15 +13,30 @@ JAR: - archive of my Classes
  
 // ArrayList methods:
 
-add(<object>) || add(<position>, <object>) -> adding new element to the end of the list; or adding element on <position>
-size() -> return size of the ArrayList;
-set(<position>, <object>) -> Replaces the element at the specified position in this list with the specified element (optional operation).
-get(<position>) -> returns the element at the specified position
-remove(<position>) -> removes the element at the specified position
+add(<object>) || add(<position>, <element>) : adding new element to the end of the list; or adding element on <position>
+size() : return size of the ArrayList;
+set(<position>, <element>) : Replaces the element at the specified position in this list with the specified element (optional operation).
+get(<position>) : returns the element at the specified position
+remove(<position>) : removes the element at the specified position
+contains(<element>) : returns boolean. if Arraylist contains specified element, returns true; else returns false;
+indexOf(<element>) : returns position of specifiend element.
+isEmpty() : returns boolean true, if list is empty; else returns false;
+clear() : removes all elements in the Arraylist;
 
 ArrayList - its a class inherited from class List
 
 // List methods:
 
 sublist(<position1>, <position2>) -> returns sublist between specified positions.
-to
+toArray() -> turns list to Array
+
+// Wrappers:
+
+Autoboxing: Object obj = 5;
+Unboxing: Integer i = 5;
+           int a = 35+i;
+ Methods:
+ 
+ Integer.compare(22,22) : returns boolean of comparing
+ Ingeger.parseInt("2") : turns String into Integer
+ 
