@@ -11,3 +11,17 @@ JAR: - archive of my Classes
  // final need to be initialized
  final reference
  
+// ArrayList methods:
+
+add(<object>) || add(<position>, <object>) -> adding new element to the end of the list; or adding element on <position>
+size() -> return size of the ArrayList;
+set(<position>, <object>) -> Replaces the element at the specified position in this list with the specified element (optional operation).
+get(<position>) -> returns the element at the specified position
+remove(<position>) -> removes the element at the specified position
+
+ArrayList - its a class inherited from class List
+
+// List methods:
+
+sublist(<position1>, <position2>) -> returns sublist between specified positions.
+to
