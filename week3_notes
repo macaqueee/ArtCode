@@ -28,7 +28,8 @@ ArrayList - its a class inherited from class List
 // List methods:
 
 sublist(<position1>, <position2>) -> returns sublist between specified positions.
-toArray() -> turns list to Array
+toArray() -> turns list to Array of Objects; Object[] arr1 = list.toArray();
+toArray(<type>) -> turns list to Array of <type>; String[] arr2 = list.toArray(new String[list.size()]);
 
 // Wrappers:
 
@@ -40,3 +41,45 @@ Unboxing: Integer i = 5;
  Integer.compare(22,22) : returns boolean of comparing
  Ingeger.parseInt("2") : turns String into Integer
  
+// Arrays:
+
+asList(<array>) : returns array as list: 
+ int[] mas = {1,2,3};
+ List list = Arrays.asList(mas);
+
+asList(<element1>, <element2>, ...) : returns list of specified elements
+ List list = Arrays.asList(1,2,3);
+
+// Design Pattern:
+
+OOD : Object Oriented Design (Обьекто-ориентированное проектирование)
+SOLID:  (рекомендации к OOD Обьектно-ориентироваанному проектированию)
+Principles:
+S : Single Responsibility;
+O : Open Closed;
+L : Barbara Liskov;
+I : Interface Segragation;
+D : Dependency Inversion;
+
+1) Signle Responsibility
+If you have Class: "User", thats mean you should put information about User ONLY and methods which refers to User ONLY
+2) Open-Closed 
+Open for extending, closed for changes.
+3) Barbara Liskov 
+Its abstraction.  
+Parent p = new Parent();
+Parent p = new Child();
+4) Interface Segregation
+Segregate (separate) one big type on smaller types. (one class and many interfaces)
+5) Dependency Inversion
+Code depends on Abstraction. Interface is Abstraction.
+
+// Strategy Pattern:  (Динамически заменить функционал на ходу, в зависимости от типа обьекта)
+Functionality depennds on type of object. No need to change code. 
+// Factory Pattern:  (Инкапсуляция создания обьекта. Создание происходит в самой библиотеке, достаточно использовать обьект,
+созданный в ней)
+Incapsulation of creation objects.
+// Adapter Pattern: (Адаптация нового обьекта, который не похож по типу ранее созданных обьектов классов)
+Changing logic in overidden methods.
+// Proxy Pattern:
+Using functionality between API and client code. (Обьявить ссылку на Interface в классе, который уже implements)
