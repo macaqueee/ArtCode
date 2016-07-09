@@ -68,13 +68,16 @@ If you have Class: "User", thats mean you should put information about User ONLY
 2) Open-Closed 
 Open for extending, closed for changes.
 3) Barbara Liskov 
-Its abstraction.  
+Its abstraction. You need to build architecture, when your child objects could replace parents objects.
 Parent p = new Parent();
 Parent p = new Child();
 4) Interface Segregation
 Segregate (separate) one big type on smaller types. (one class and many interfaces)
 5) Dependency Inversion
 Code depends on Abstraction. Interface is Abstraction.
+showAll(List al)
+showAll(ArrayList al)
+References -> interfaces
 
 // Strategy Pattern:  (Динамически заменить функционал на ходу, в зависимости от типа обьекта)
 Functionality depennds on type of object. No need to change code. 
@@ -84,4 +87,5 @@ Incapsulation of creation objects.
 // Adapter Pattern: (Адаптация нового обьекта, который не похож по типу ранее созданных обьектов классов)
 Changing logic in overidden methods.
 // Proxy Pattern:
-Using functionality between API and client code. (Обьявить ссылку на Interface в классе, который уже implements)
+Using functionality between API and client code. (Используется, когда перед использованием API необходимо поставить промежуточную
+логику (например проверку). Нужно обьявить ссылку на Interface в классе с этой логикой, который уже implements от общего интерфейса)
