@@ -1,0 +1,87 @@
+// Lifecycle:
+
+JAR: - archive of my Classes
+-classpath: place, where my .jar and .class (and etc.) presents
+-classloader: loading class, what i need. (Classpath -> where from, import <package> -> what is loading)
+
+// static
+ static fields and blocks -> calling during loading
+ initializating of static: Only once, after first time loading Class (calling Class'es static variable or block from method)
+ static depends on CLASS
+ non-static depends on INSTANCE
+ 
+ // final need to be initialized
+ final reference
+ 
+// ArrayList methods:
+
+add(<object>) || add(<position>, <element>) : adding new element to the end of the list; or adding element on <position>
+size() : return size of the ArrayList;
+set(<position>, <element>) : Replaces the element at the specified position in this list with the specified element (optional operation).
+get(<position>) : returns the element at the specified position
+remove(<position>) : removes the element at the specified position
+contains(<element>) : returns boolean. if Arraylist contains specified element, returns true; else returns false;
+indexOf(<element>) : returns position of specifiend element.
+isEmpty() : returns boolean true, if list is empty; else returns false;
+clear() : removes all elements in the Arraylist;
+
+ArrayList - its a class inherited from class List
+
+// List methods:
+
+sublist(<position1>, <position2>) -> returns sublist between specified positions.
+toArray() -> turns list to Array of Objects; Object[] arr1 = list.toArray();
+toArray(<type>) -> turns list to Array of <type>; String[] arr2 = list.toArray(new String[list.size()]);
+
+// Wrappers:
+
+Autoboxing: Object obj = 5;
+Unboxing: Integer i = 5;
+           int a = 35+i;
+ Methods:
+ 
+ Integer.compare(22,22) : returns boolean of comparing
+ Ingeger.parseInt("2") : turns String into Integer
+ 
+// Arrays:
+
+asList(<array>) : returns array as list: 
+ int[] mas = {1,2,3};
+ List list = Arrays.asList(mas);
+
+asList(<element1>, <element2>, ...) : returns list of specified elements
+ List list = Arrays.asList(1,2,3);
+
+// Design Pattern:
+
+OOD : Object Oriented Design (Обьекто-ориентированное проектирование)
+SOLID:  (рекомендации к OOD Обьектно-ориентироваанному проектированию)
+Principles:
+S : Single Responsibility;
+O : Open Closed;
+L : Barbara Liskov;
+I : Interface Segragation;
+D : Dependency Inversion;
+
+1) Signle Responsibility
+If you have Class: "User", thats mean you should put information about User ONLY and methods which refers to User ONLY
+2) Open-Closed 
+Open for extending, closed for changes.
+3) Barbara Liskov 
+Its abstraction.  
+Parent p = new Parent();
+Parent p = new Child();
+4) Interface Segregation
+Segregate (separate) one big type on smaller types. (one class and many interfaces)
+5) Dependency Inversion
+Code depends on Abstraction. Interface is Abstraction.
+
+// Strategy Pattern:  (Динамически заменить функционал на ходу, в зависимости от типа обьекта)
+Functionality depennds on type of object. No need to change code. 
+// Factory Pattern:  (Инкапсуляция создания обьекта. Создание происходит в самой библиотеке, достаточно использовать обьект,
+созданный в ней)
+Incapsulation of creation objects.
+// Adapter Pattern: (Адаптация нового обьекта, который не похож по типу ранее созданных обьектов классов)
+Changing logic in overidden methods.
+// Proxy Pattern:
+Using functionality between API and client code. (Обьявить ссылку на Interface в классе, который уже implements)
