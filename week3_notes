@@ -3,6 +3,8 @@
 JAR: - archive of my Classes
 -classpath: place, where my .jar and .class (and etc.) presents
 -classloader: loading class, what i need. (Classpath -> where from, import <package> -> what is loading)
+
+// static
  static fields and blocks -> calling during loading
  initializating of static: Only once, after first time loading Class (calling Class'es static variable or block from method)
  static depends on CLASS
