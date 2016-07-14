@@ -1,0 +1,29 @@
+// Iterator
+
+//nested class
+
+Possibility to create and use inner class.
+
+// Exception:
+
+Some type of Object which help to determine the reason of issue.
+
+Types:
+
+1)Unchecked -> Situation was created by programmist
+
+- NullPointer
+- IndexOutOfBound
+- OutOfMemory
+- AriphmeticalExcep
+
+2) Checked
+Should be threated.
+
+If you want create exception class, you should extends that class from class Throwable.
+
+// Generics
+
+
+
+
