@@ -49,5 +49,12 @@ Comparator:
 Interface, which gives you possibility to compare two separate objects.
 compare(a,b), where a and b -> instances of class A and class B accordingly
 
+// Decorator Pattern:
+
+Pattern for dynamical changing(or building) functional chain
+
+Serialization: Object -> ByteCode
+Deserialization: ByteCode -> Object
+
 
 
