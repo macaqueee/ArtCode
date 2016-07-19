@@ -1,6 +1,8 @@
 package design_patterns.social_network.test;
 
 import design_patterns.social_network.EducationSystemController;
+import design_patterns.social_network.exception.InvalidLoginException;
+import design_patterns.social_network.exception.MyApplicationException;
 import design_patterns.social_network.facebook.FacebookApi;
 import design_patterns.social_network.vk.PowerPoint;
 import design_patterns.social_network.vk.VkApi;
@@ -11,7 +13,7 @@ import design_patterns.social_network.vk.VkServer;
  */
 public class TestStrategy {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InvalidLoginException, MyApplicationException {
         EducationSystemController systemController = new EducationSystemController();
         //VkApi socialNetworkApi = new VkApi(new VkServer(new PowerPoint(220,"USA"),"i7",128,200));
     //    systemController.setSocialNetworkApi(systemController.getSocialNetworkApi());
