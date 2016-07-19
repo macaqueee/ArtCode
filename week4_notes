@@ -1,0 +1,60 @@
+// Iterator
+
+//nested class
+
+Possibility to create and use inner class.
+
+// Exception:
+
+Some type of Object which help to determine the reason of issue.
+
+Types:
+
+1)Unchecked -> Situation was created by programmist
+
+- NullPointer
+- IndexOutOfBound
+- OutOfMemory
+- AriphmeticalExcep
+
+2) Checked
+Should be threated.
+
+RunTimeException -> Exception -> Throwable
+IOException -> Exception -> Throwable
+Error -> Throwable
+
+If you want create exception class, you should extends that class from class Throwable.
+
+// Generics
+
+Helps to determine type of class during compilation. Defense code from run errors. (make all errors -> compilation).
+Using like container. No need to make changes, only contains.
+
+List<Type>
+List<?> -> wildcard, using for limitations of types
+List<? extends Integer> -> type, which extends class Integer
+List<? super Number> ->  type, which higher of class Number
+
+//Comparable vs Comparator
+
+Combarable:
+
+Interface, which gives property for your insatance of class to be compared with someone else:
+a.compare(b), where a -> instance of class A, compare -> overriding method of class A, b -> instance of other class.
+
+
+Comparator: 
+
+Interface, which gives you possibility to compare two separate objects.
+compare(a,b), where a and b -> instances of class A and class B accordingly
+
+// Decorator Pattern:
+
+Pattern for dynamical changing(or building) functional chain
+
+Serialization: Object -> ByteCode
+Deserialization: ByteCode -> Object
+
+
+
