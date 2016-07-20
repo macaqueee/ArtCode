@@ -34,3 +34,18 @@ Dynamic:
 2) 3 operations for adding (no need to shift array, increase length of array).
 3) using for creation complex structures (tree)
 -: no index, only reference to the address of next element
+
+
+// Data Structures
+
+1. Stack
+
+LIFO (Las In First Out)
+
+
+2. Queue
+
+FIFO (First in First Out)
+
+enqueue -> addLast
+dequeue -> getFirst
