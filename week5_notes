@@ -13,4 +13,24 @@ Conditions:
 
 Find min in array and put on defined position
 
-2. 
+// Recursion
+
+Used for tree-oriented complex structures. Look like loop.
+
+// Immutable;
+
+Class with non-changing objects;
+// Structures
+
+Static:
+
++: index
+-: static length, memory 
+
+Dynamic:
+
++:
+1) enough to know reference to first element. 
+2) 3 operations for adding (no need to shift array, increase length of array).
+3) using for creation complex structures (tree)
+-: no index, only reference to the address of next element
