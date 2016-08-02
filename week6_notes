@@ -7,3 +7,34 @@ Structutre which consist of unique elements
 Look like linear chain (50->45->40->35->30)
 
 2) Balanced Tree (AVL, RED-BLACK TREE) search and replace some elements;
+
+
+// Hash
+
+Hashstructure -> array (static) -> use indexes
+
+O(1):
+add()
+remove()
+contains()
+
+1)add method:
+object -> hashcode() returns int a -> a % size = index -> add at [index] position
+
+2)remove method
+object -> hashcode() returns int a -> a % size = index -> check element on [index] position -> remove if equals
+
+Colision:
+
+If [index] where you want to put new element already using by another not equals element.
+
+loadFactor:
+
+If structure more 75% filled up -> make rehashing();
+
+If you want override hashcode() you need ovverride equals();
+
+
+
+
+
