@@ -1,0 +1,9 @@
+//Set
+
+Structutre which consist of unique elements
+
+1) Not balanced (BST - binary search tree)
+
+Look like linear chain (50->45->40->35->30)
+
+2) Balanced Tree (AVL, RED-BLACK TREE) search and replace some elements;
