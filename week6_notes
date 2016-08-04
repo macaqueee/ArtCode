@@ -1,8 +1,4 @@
-//Set
-
-Structutre which consist of unique elements
-
-Structures:
+// Structures
 
 Static - structures builds on array. Got indexes, searching is really quickly. Examples: Arrays, ArrayList
 Dynamic - structures, based on Nodes. Flexible, easy to add new element, but has complex process of searching. Examples: LinkedList
@@ -13,8 +9,23 @@ Look like linear chain (50->45->40->35->30)
 
 2) Balanced Tree (AVL, RED-BLACK TREE) search and replace some elements;
 
+// Java Collections
 
+1) interface Iterable<E> - returns iterator (foreach)
+2) interface Collection<E> - container for some data. got methods add, remove, retainAll,toArray etc. (Collection extends Iterable)
+3) interface List<E> - methods with indexes. List is a sequence of elements.
+4) AbstractList<E> implements List 
+
+5) Set<E> - consist of unique elements only. Set extends Collection
+5) Queue<E> - structure, which has methods with same actions, but returns different things. Queue extends Collection.
+
+  add() returns exception
+  offer() returns special value
+  
+6) Dequeue<E> - structure, which you want to use like a Queue or like a dequeue. Dequeue extends Queue.
 // Hash
+
+7) PriorityQueue<E> - got methods Comparator (Comparable) for define sequence of elements. 
 
 Hashstructure -> array (static) -> use indexes
 
@@ -42,5 +53,12 @@ If you want override hashcode() you need ovverride equals();
 //Map
 
 1) HashMap
+<key, value>
 
+2) LinkedHashMap = HashMap + LinkedList;
+Make sequence of Map's elements. 
+
+3) TreeMap
+
+Sorted structure
 
