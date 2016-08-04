@@ -23,6 +23,7 @@ Look like linear chain (50->45->40->35->30)
   offer() returns special value
   
 6) Dequeue<E> - structure, which you want to use like a Queue or like a dequeue. Dequeue extends Queue.
+
 // Hash
 
 7) PriorityQueue<E> - got methods Comparator (Comparable) for define sequence of elements. 
